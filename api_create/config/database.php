@@ -2,14 +2,14 @@
 // used to get mysql database connection
 class Database{
  
-    // specify your own database credentials
+    // specify your own database credentials 
     private $host = "localhost";
     private $db_name = "api_test";
     private $username = "root";
     private $password = "";
     public $conn;
  
-    // get the database connection
+    // get the database connection here
     public function getConnection(){
  
         $this->conn = null;
