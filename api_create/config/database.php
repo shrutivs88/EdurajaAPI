@@ -2,7 +2,7 @@
 // used to get mysql database connection
 class Database{
  
-    // specify your own database credentials 
+    // specify your own database credentials here
     private $host = "localhost";
     private $db_name = "api_test";
     private $username = "root";

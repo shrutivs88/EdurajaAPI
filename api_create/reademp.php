@@ -22,7 +22,6 @@
                             $sql = "select * from emp";
                             $query = mysqli_query($connection, $sql);
                             while ($row = mysqli_fetch_array($query)) {
-                            // echo "<b><a href="reademp.php?id={$row['id']}">{$row['fullname']}</a></b>";
                             echo " <b><a href='reademp.php?id={$row["id"]}'>{$row['fullname']}</a></b>";
                             echo "<br />";
                             }
