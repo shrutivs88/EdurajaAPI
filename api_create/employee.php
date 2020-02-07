@@ -30,7 +30,7 @@ $user->dob = $data->dob;
 $user->city = $data->city;
 $user->state = $data->state;
 $user->pincode = $data->pincode;
- 
+$user->age = $data->age; 
 // use the create() method here
 // create the user
 if(
@@ -41,6 +41,7 @@ if(
     !empty($user->city) &&
     !empty($user->state) &&
     !empty($user->pincode) &&
+    !empty($user->age)&&
     $user->create()
 ){
  

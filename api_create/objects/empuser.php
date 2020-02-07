@@ -15,6 +15,7 @@ class User{
     public $city;
     public $state;
     public $pincode;
+    public $age;
  
     // constructor
     public function __construct($db){
@@ -34,7 +35,8 @@ function create(){
                 dob = :dob,
                 city = :city,
                 state = :state,
-                pincode = :pincode";
+                pincode = :pincode,
+                age = :age";
  
     // prepare the query
     $stmt = $this->conn->prepare($query);
@@ -47,6 +49,7 @@ function create(){
     $this->city=htmlspecialchars(strip_tags($this->city));
     $this->state=htmlspecialchars(strip_tags($this->state));
     $this->pincode=htmlspecialchars(strip_tags($this->pincode));
+    $this->age=htmlspecialchars(strip_tags($this->age));
  
     // bind the values
     $stmt->bindParam(':fullname', $this->fullname);
@@ -56,6 +59,7 @@ function create(){
     $stmt->bindParam(':city', $this->city);
     $stmt->bindParam(':state', $this->state);
     $stmt->bindParam(':pincode', $this->pincode);
+    $stmt->bindParam(':age', $this->age);
  
     // hash the password before saving to database
     // $password_hash = password_hash($this->password, PASSWORD_BCRYPT);
