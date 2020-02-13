@@ -6,11 +6,9 @@ header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 
-	 // Check whether username or password is set from android	
-  
-		  // Innitialize Variable
+	
 		
-	   	  $phone = $_GET['phone'];
+	   $phone = $_GET['phone'];
           $password = md5($_GET['password']);
 		  
             $hostname = "localhost";      // That Is For Database Connection
