@@ -5,13 +5,11 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-// $id = $_GET['id'];
+
 $fullname  =$_GET['fullname'];
 $phone = $_GET['phone'];
 $emailid = $_GET['emailid'];
 $pwd = md5($_GET['password']);
-
-
 
 $hostname = "localhost";      // That Is For Database Connection
 $database = "api_test";
